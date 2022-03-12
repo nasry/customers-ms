@@ -1,0 +1,15 @@
+services:
+  db:
+    image: "postgres:10.20-alpine"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+  app:
+    build:
+      context: .
+      dockerfile: docker/app/Dockerfile
+    ports:
+      - "8080:8080"
+    depends_on:
+      - db
