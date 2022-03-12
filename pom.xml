@@ -11,10 +11,10 @@
     <groupId>tn.nasry</groupId>
     <artifactId>customer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>customer</name>
+    <name>customers-ms</name>
     <description>microservice that manage customer</description>
     <properties>
-        <java.version>11</java.version>
+        <java.version>8</java.version>
     </properties>
     <dependencies>
         <dependency>
