@@ -18,13 +18,13 @@ public class CustomerController {
     CustomerService customerService;
 
     @PostMapping
-    public ResponseEntity<Customer> save(Customer customer) {
+    public ResponseEntity<Customer> save( @RequestBody Customer customer) {
         return ResponseEntity.status(HttpStatus.CREATED).
                 body(customerService.save(customer));
     }
 
     @PutMapping
-    public ResponseEntity<Void> update(Customer customer) {
+    public ResponseEntity<Void> update(@RequestBody Customer customer) {
         customerService.save(customer);
         return ResponseEntity.status(HttpStatus.NO_CONTENT).build();
     }
