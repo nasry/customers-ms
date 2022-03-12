@@ -3,7 +3,8 @@ pipeline {
     stages {
         stage("build") {
             steps {
-                echo "build stage ..."
+                ecgo 'building the application'
+                sh 'mvn clean install'
             }
         }
         stage("test") {
